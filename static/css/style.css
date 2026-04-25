@@ -72,3 +72,32 @@ select { background: #edf6f9; color: #14213d; margin-left: 8px; }
   justify-content: center;
   flex-wrap: wrap;
 }
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 48px);
+  justify-content: center;
+  margin: 24px auto;
+}
+.sudoku-board input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 22px;
+  border: 1px solid #9bb7c9;
+  outline: none;
+}
+.sudoku-board input.prefilled {
+  background: #dff3ff;
+  font-weight: 800;
+  color: #023e8a;
+}
+.sudoku-board input:nth-child(3n) { border-right: 3px solid #14213d; }
+.sudoku-board input:nth-child(9n) { border-right: 1px solid #9bb7c9; }
+.sudoku-board input:nth-child(n+19):nth-child(-n+27),
+.sudoku-board input:nth-child(n+46):nth-child(-n+54) { border-bottom: 3px solid #14213d; }
+@media (max-width: 620px) {
+  .ttt-board { grid-template-columns: repeat(3, 84px); }
+  .cell { width: 84px; height: 84px; font-size: 42px; }
+  .sudoku-board { grid-template-columns: repeat(9, 34px); }
+  .sudoku-board input { width: 34px; height: 34px; font-size: 17px; }
+}
