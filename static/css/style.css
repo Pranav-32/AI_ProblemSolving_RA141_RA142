@@ -53,3 +53,22 @@ select { background: #edf6f9; color: #14213d; margin-left: 8px; }
   justify-content: center;
   margin: 26px auto;
 }
+.cell {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  background: #e6f5ff;
+  display: grid;
+  place-items: center;
+  font-size: 54px;
+  font-weight: 900;
+  color: #0077b6;
+  border: 2px solid #bde0fe;
+}
+.cell:hover { background: #d8efff; }
+.metrics {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
